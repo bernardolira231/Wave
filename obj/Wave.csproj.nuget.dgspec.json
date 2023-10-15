@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\UAG\\Semestre 5\\Ingeniería de Software II\\Proyecto Final\\CODE\\Wave\\Wave.csproj": {}
+    "C:\\Users\\EricG\\Desktop\\Wave\\Wave.csproj": {}
   },
   "projects": {
-    "D:\\UAG\\Semestre 5\\Ingeniería de Software II\\Proyecto Final\\CODE\\Wave\\Wave.csproj": {
+    "C:\\Users\\EricG\\Desktop\\Wave\\Wave.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UAG\\Semestre 5\\Ingeniería de Software II\\Proyecto Final\\CODE\\Wave\\Wave.csproj",
+        "projectUniqueName": "C:\\Users\\EricG\\Desktop\\Wave\\Wave.csproj",
         "projectName": "Wave",
-        "projectPath": "D:\\UAG\\Semestre 5\\Ingeniería de Software II\\Proyecto Final\\CODE\\Wave\\Wave.csproj",
-        "packagesPath": "C:\\Users\\Guillermo González\\.nuget\\packages\\",
-        "outputPath": "D:\\UAG\\Semestre 5\\Ingeniería de Software II\\Proyecto Final\\CODE\\Wave\\obj\\",
+        "projectPath": "C:\\Users\\EricG\\Desktop\\Wave\\Wave.csproj",
+        "packagesPath": "C:\\Users\\EricG\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\EricG\\Desktop\\Wave\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Guillermo González\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\EricG\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,18 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.12, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
