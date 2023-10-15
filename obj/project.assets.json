@@ -2889,11 +2889,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EricG\\Desktop\\Wave\\Wave.csproj",
+      "projectUniqueName": "C:\\Users\\EricG\\source\\repos\\Wave\\Wave.csproj",
       "projectName": "Wave",
-      "projectPath": "C:\\Users\\EricG\\Desktop\\Wave\\Wave.csproj",
+      "projectPath": "C:\\Users\\EricG\\source\\repos\\Wave\\Wave.csproj",
       "packagesPath": "C:\\Users\\EricG\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EricG\\Desktop\\Wave\\obj\\",
+      "outputPath": "C:\\Users\\EricG\\source\\repos\\Wave\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\EricG\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2952,7 +2952,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

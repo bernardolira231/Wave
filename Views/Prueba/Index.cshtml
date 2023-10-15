@@ -1,0 +1,20 @@
+﻿@model List<Usuario>
+
+<h1>Usuarios Registrados</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre de usuario</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var usuario in Model){
+            <tr>
+                <td>@Html.DisplayFor(m => usuario.UserName)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<footer>Si llegaste hasta aquí sabes demasiado</footer>

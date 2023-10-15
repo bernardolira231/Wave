@@ -1,7 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using Wave.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Inyección de dependencia
+// Parte del pricipio SOLID
+builder.Services.AddDbContext<WaveDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("WaveDbContext"));
+});
 
 var app = builder.Build();
 
