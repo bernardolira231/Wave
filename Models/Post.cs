@@ -9,6 +9,8 @@ public partial class Post
 
     public int UserId { get; set; }
 
+    public int Likes { get; set; }
+
     public DateTime PublicationDate { get; set; }
 
     public bool? IsDeleted { get; set; }

@@ -27,7 +27,7 @@ public partial class WaveDbContext : DbContext
     {
         modelBuilder.Entity<Post>(entity =>
         {
-            entity.HasKey(e => e.PostId).HasName("PK__post__3ED78766EA79C526");
+            entity.HasKey(e => e.PostId).HasName("PK__post__3ED78766EE080A13");
 
             entity.ToTable("post");
 
@@ -43,6 +43,7 @@ public partial class WaveDbContext : DbContext
             entity.Property(e => e.IsDeleted)
                 .HasDefaultValueSql("((0))")
                 .HasColumnName("is_deleted");
+            entity.Property(e => e.Likes).HasColumnName("likes");
             entity.Property(e => e.PublicationDate)
                 .HasColumnType("date")
                 .HasColumnName("publication_date");
@@ -51,7 +52,7 @@ public partial class WaveDbContext : DbContext
             entity.HasOne(d => d.User).WithMany(p => p.Posts)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__post__user_id__4BAC3F29");
+                .HasConstraintName("FK__post__user_id__5CD6CB2B");
         });
 
         modelBuilder.Entity<Usuario>(entity =>
