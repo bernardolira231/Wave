@@ -13,6 +13,6 @@ namespace Wave.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index() => View(await _context.Usuarios.ToListAsync());
+        public async Task<IActionResult> Index() => View(await _context.Posts.ToListAsync());
     }
 }

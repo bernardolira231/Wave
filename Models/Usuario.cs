@@ -13,7 +13,7 @@ public partial class Usuario
 
     public string Password { get; set; } = null!;
 
-    public string ProfilePicture { get; set; } = null!;
+    public byte[]? ProfilePicture { get; set; }
 
     public virtual ICollection<Post> Posts { get; set; } = new List<Post>();
 }

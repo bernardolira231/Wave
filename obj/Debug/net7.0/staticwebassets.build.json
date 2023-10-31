@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NBFiun4f6BPkzZUYRSpYmeKDgh+qoR4JMhmW2zxFNTk=",
+  "Hash": "QEJAv+8ErA1A5yILDmDPiu78iG67YRq8pSPv22ByLR0=",
   "Source": "Wave",
   "BasePath": "_content/Wave",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\EricG\\source\\repos\\Wave\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Wave.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\css\\prueba.css",
+      "SourceId": "Wave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\",
+      "BasePath": "_content/Wave",
+      "RelativePath": "css/prueba.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\prueba.css"
     },
     {
       "Identity": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\css\\site.css",

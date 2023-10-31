@@ -15,7 +15,7 @@ public partial class Post
 
     public bool? IsDeleted { get; set; }
 
-    public string Content { get; set; } = null!;
+    public byte[] Content { get; set; } = null!;
 
     public string? Caption { get; set; }
 

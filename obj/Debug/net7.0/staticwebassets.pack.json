@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Wave.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\css\\prueba.css",
+      "PackagePath": "staticwebassets\\css\\prueba.css"
+    },
+    {
       "Id": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
