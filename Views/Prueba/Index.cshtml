@@ -19,10 +19,10 @@
         <ul>
             @foreach (var post in Model)
             {
-                if (post.UserId == 1)
+                if (post.UserId == 2)
                 {
                     <li class="post-item">
-                        <img src="data:image/jpeg;base64,@Convert.ToBase64String(post.Content)" alt="Imagen" />
+                        <img src="data:image/jpeg;base64, @Convert.ToBase64String(post.Content)" alt="Imagen" />
                     </li>
                 }
             }
@@ -30,6 +30,3 @@
     </div>
 </body>
 </html>
-<footer>
-    Si llegaste hasta aquí sabes demasiado
-</footer>
