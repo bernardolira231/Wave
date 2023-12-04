@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\css\style.css" />
-    <None Include="wwwroot\js\script.js" />
+    <None Include="wwwroot\css\index.css" />
+    <None Include="wwwroot\js\login.js" />
   </ItemGroup>
 
   <ItemGroup>

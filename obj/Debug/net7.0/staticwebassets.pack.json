@@ -1,8 +1,12 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\EricG\\source\\repos\\Wave\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Wave.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Wave.bundle.scp.css"
+      "Id": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
+      "Id": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
       "Id": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\css\\prueba.css",
@@ -17,12 +21,28 @@
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
+      "Id": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\css\\test.css",
+      "PackagePath": "staticwebassets\\css\\test.css"
+    },
+    {
       "Id": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\js\\script.js",
-      "PackagePath": "staticwebassets\\js\\script.js"
+      "Id": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\js\\index.js",
+      "PackagePath": "staticwebassets\\js\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\js\\login.js",
+      "PackagePath": "staticwebassets\\js\\login.js"
+    },
+    {
+      "Id": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\js\\posts.js",
+      "PackagePath": "staticwebassets\\js\\posts.js"
     },
     {
       "Id": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\js\\site.js",

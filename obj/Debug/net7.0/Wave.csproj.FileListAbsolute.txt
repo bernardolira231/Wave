@@ -170,9 +170,7 @@ C:\Users\EricG\source\repos\Wave\obj\Debug\net7.0\staticwebassets\msbuild.buildT
 C:\Users\EricG\source\repos\Wave\obj\Debug\net7.0\staticwebassets.pack.json
 C:\Users\EricG\source\repos\Wave\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\EricG\source\repos\Wave\obj\Debug\net7.0\staticwebassets.development.json
-C:\Users\EricG\source\repos\Wave\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\EricG\source\repos\Wave\obj\Debug\net7.0\scopedcss\bundle\Wave.styles.css
-C:\Users\EricG\source\repos\Wave\obj\Debug\net7.0\scopedcss\projectbundle\Wave.bundle.scp.css
 C:\Users\EricG\source\repos\Wave\obj\Debug\net7.0\Wave.csproj.CopyComplete
 C:\Users\EricG\source\repos\Wave\obj\Debug\net7.0\Wave.dll
 C:\Users\EricG\source\repos\Wave\obj\Debug\net7.0\refint\Wave.dll

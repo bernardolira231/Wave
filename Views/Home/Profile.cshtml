@@ -1,20 +1,21 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Profile Page";
 }
 
 @model List<Wave.Models.Post>
 
-<link rel="stylesheet" href="css/index.css">
-<link rel="stylesheet" href="css/test.css">
+<link rel="stylesheet" href="~/css/test.css">
 
 <main>
     <div class="main__profile">
         <div id="profilePic">
+            <!--Foto de perfil del usuario con el id asignado a la session-->
             <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="">
         </div>
         <br>
         <div class="spaceName">
-            <h3><!-- Nickname --></h3>
+            <!--Nombre del usuario con el id asignado a la session-->
+            <h3>Nombre x</h3>
         </div>
         <br>
         <div class="btnZone">
@@ -92,6 +93,7 @@
             </div>
         </div>
     </div>
+
+    <script src="~/js/posts.js"></script>
 </main>
 
-<script src="~/js/posts.js" asp-append-version="true"></script>

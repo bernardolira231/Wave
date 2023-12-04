@@ -1,5 +1,6 @@
-/* _content/Wave/Views/Shared/_Layout.cshtml.rz.scp.css */
-:root[b-cwwq92nfam] {
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
     --color-primary: #6C9BCF;
     --color-danger: #FF0060;
     --color-success: #1B9C85;
@@ -18,7 +19,7 @@
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
-.dark-mode-variables[b-cwwq92nfam] {
+.dark-mode-variables {
     --color-background: #181a1e;
     --color-white: #202528;
     --color-dark: #edeffd;
@@ -27,7 +28,7 @@
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
-*[b-cwwq92nfam] {
+* {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -37,11 +38,11 @@
     box-sizing: border-box;
 }
 
-html[b-cwwq92nfam] {
+html {
     font-size: 14px;
 }
 
-body[b-cwwq92nfam] {
+body {
     width: 100vw;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
@@ -52,64 +53,64 @@ body[b-cwwq92nfam] {
     background-color: var(--color-background);
 }
 
-.primary[b-cwwq92nfam] {
+.primary {
     color: var(--color-primary);
 }
 
-.danger[b-cwwq92nfam] {
+.danger {
     color: var(--color-danger);
 }
 
-.success[b-cwwq92nfam] {
+.success {
     color: var(--color-success);
 }
 
-.warning[b-cwwq92nfam] {
+.warning {
     color: var(--color-warning);
 }
 
-.wave[b-cwwq92nfam] {
+.wave {
     color: var(--color-wave);
 }
 
-a[b-cwwq92nfam] {
+a {
     color: var(--color-dark);
 }
 
-img[b-cwwq92nfam] {
+img {
     display: block;
     width: 100%;
     object-fit: cover;
 }
 
-h1[b-cwwq92nfam] {
+h1 {
     font-weight: 800;
     font-size: 1.8rem;
 }
 
-h2[b-cwwq92nfam] {
+h2 {
     font-weight: 600;
     font-size: 1.4rem;
 }
 
-.h2__wave[b-cwwq92nfam] {
+.h2__wave {
     margin-top: 0.5rem;
 }
 
-h3[b-cwwq92nfam] {
+h3 {
     font-weight: 500;
     font-size: 0.87rem;
 }
 
-p[b-cwwq92nfam] {
+p {
     color: var(--color-dark-variant);
 }
 
-b[b-cwwq92nfam] {
+b {
     color: var(--color-dark);
 }
 
-.container[b-cwwq92nfam] {
+.container {
     display: grid;
     width: 96%;
     margin: 0 auto;
@@ -117,33 +118,33 @@ b[b-cwwq92nfam] {
     grid-template-columns: 12rem auto 23rem;
 }
 
-aside[b-cwwq92nfam] {
+aside {
     height: 100vh;
 }
 
-    aside .toggle[b-cwwq92nfam] {
+    aside .toggle {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-top: 1.4rem;
     }
 
-        aside .toggle .logo[b-cwwq92nfam] {
+        aside .toggle .logo {
             display: flex;
             gap: 0.5rem;
         }
 
-            aside .toggle .logo img[b-cwwq92nfam] {
+            aside .toggle .logo img {
                 width: 3rem;
                 height: 3rem;
             }
 
-        aside .toggle .close[b-cwwq92nfam] {
+        aside .toggle .close {
             padding-right: 1rem;
             display: none;
         }
 
-    aside .sidebar[b-cwwq92nfam] {
+    aside .sidebar {
         display: flex;
         flex-direction: column;
         background-color: var(--color-white);
@@ -155,11 +156,11 @@ aside[b-cwwq92nfam] {
         transition: all 0.3s ease;
     }
 
-        aside .sidebar:hover[b-cwwq92nfam] {
+        aside .sidebar:hover {
             box-shadow: none;
         }
 
-        aside .sidebar a[b-cwwq92nfam] {
+        aside .sidebar a {
             display: flex;
             align-items: center;
             color: var(--color-info-dark);
@@ -170,45 +171,45 @@ aside[b-cwwq92nfam] {
             transition: all 0.3s ease;
         }
 
-            aside .sidebar a span[b-cwwq92nfam] {
+            aside .sidebar a span {
                 font-size: 1.6rem;
                 transition: all 0.3s ease;
             }
 
-            aside .sidebar a:last-child[b-cwwq92nfam] {
+            aside .sidebar a:last-child {
                 position: absolute;
                 bottom: 2rem;
                 width: 100%;
             }
 
-            aside .sidebar a.active[b-cwwq92nfam] {
+            aside .sidebar a.active {
                 width: 100%;
                 color: var(--color-primary);
                 background-color: var(--color-light);
                 margin-left: 0;
             }
 
-                aside .sidebar a.active[b-cwwq92nfam]::before {
+                aside .sidebar a.active::before {
                     content: '';
                     width: 6px;
                     height: 18px;
                     background-color: var(--color-primary);
                 }
 
-                aside .sidebar a.active span[b-cwwq92nfam] {
+                aside .sidebar a.active span {
                     color: var(--color-primary);
                     margin-left: calc(1rem - 3px);
                 }
 
-            aside .sidebar a:hover[b-cwwq92nfam] {
+            aside .sidebar a:hover {
                 color: var(--color-primary);
             }
 
-                aside .sidebar a:hover span[b-cwwq92nfam] {
+                aside .sidebar a:hover span {
                     margin-left: 0.6rem;
                 }
 
-        aside .sidebar .dark-mode[b-cwwq92nfam] {
+        aside .sidebar .dark-mode {
             background-color: var(--color-light);
             display: flex;
             justify-content: space-between;
@@ -225,7 +226,7 @@ aside[b-cwwq92nfam] {
             left: 2rem;
         }
 
-            aside .sidebar .dark-mode span[b-cwwq92nfam] {
+            aside .sidebar .dark-mode span {
                 font-size: 1.2rem;
                 width: 50%;
                 height: 100%;
@@ -234,17 +235,17 @@ aside[b-cwwq92nfam] {
                 justify-content: center;
             }
 
-                aside .sidebar .dark-mode span.active[b-cwwq92nfam] {
+                aside .sidebar .dark-mode span.active {
                     background-color: var(--color-primary);
                     color: white;
                     border-radius: var(--border-radius-1);
                 }
 
-main[b-cwwq92nfam] {
+main {
     margin-top: 1.4rem;
 }
 
-    main .search input[b-cwwq92nfam] {
+    main .search input {
         border-radius: 1rem;
         background-color: var(--color-white);
         font-size: 20px;

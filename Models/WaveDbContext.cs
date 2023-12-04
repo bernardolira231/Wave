@@ -20,7 +20,7 @@ public partial class WaveDbContext : DbContext
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=LAPTOP-U7UB4HFG\\SQLEXPRESS; Database=waveDB; Trusted_Connection=True; TrustServerCertificate=true;");
+        => optionsBuilder.UseSqlServer("");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

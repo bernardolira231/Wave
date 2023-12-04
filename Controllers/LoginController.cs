@@ -10,7 +10,7 @@ namespace Wave.Controllers
         public LoginController(WaveDbContext context)
         {
             _context = context;
-        }
+        }   
 
         public IActionResult Index()
         {
@@ -20,6 +20,7 @@ namespace Wave.Controllers
         [HttpPost]
         public ActionResult SignUp()
         {
+            // Agregar sessions para tener control
             // Trabajar ecepciones para que no estén vacios, y el email sea valido, además que el username no se repita
             string username = Request.Form["Username"];
             string email = Request.Form["Email"];
@@ -31,6 +32,9 @@ namespace Wave.Controllers
             if (existingUser != null)
             {
                 // Mandar mensaje de que ya existe una cuenta asociada a ese correo
+                // return View("~/Views/Login");
+                ViewData["ErrorMessage"] = "Ya existe una cuenta asociada a ese correo.";
+                return View("Index");
             }
             else
             {
@@ -47,15 +51,15 @@ namespace Wave.Controllers
                 _context.SaveChanges(); 
 
                 // Mostrar perfil
-                return View("~/Views/Prueba/Index.cshtml");
+                // return View("~/Views/Prueba/Index.cshtml");
+                return RedirectToAction("Index", "Prueba");
             }
-
-            return null;
         }
 
         [HttpPost]
         public ActionResult SignIn()
         {
+            // Agregar sessions para tener control
             // Trabajar ecepciones para que no estén vacios
             string email = Request.Form["Email"];
             string password = Request.Form["Password"];
@@ -67,15 +71,17 @@ namespace Wave.Controllers
 
             if (user != null)
             {
-                // Usuario válido, redirigiir a la pagina del perfil, además de ir mandando su id o algo para identificarlo en las vistas siguientes
-                return View("~/Views/Prueba/Index.cshtml");
+                // Usuario válido, redirigir a la pagina del perfil, además de ir mandando su id o algo para identificarlo en las vistas siguientes(Quizas sean sessions)
+                // return View("~/Views/Prueba/Index.cshtml");
+                return RedirectToAction("Index", "Prueba");
             }
             else
             {
                 // si no enviar mensaje de error por que no existe ese usuario o los datos son incorrectos
+                // return View("~/Views/Login");
+                ViewData["ErrorMessage"] = "Credenciales incorrectas.";
+                return View("Index");
             }
-
-            return null;
         }
     }
 }
