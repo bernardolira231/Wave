@@ -48,11 +48,14 @@ namespace Wave.Controllers
 
                 // Guardar el nuevo usuario en la base de datos
                 _context.Usuarios.Add(newUser);
-                _context.SaveChanges(); 
+                _context.SaveChanges();
+
+                // Guardar el ID del usuario en la sesión
+                HttpContext.Session.SetInt32("UserId", newUser.UserId);
 
                 // Mostrar perfil
                 // return View("~/Views/Prueba/Index.cshtml");
-                return RedirectToAction("Index", "Prueba");
+                return RedirectToAction("Profile", "Home");
             }
         }
 
@@ -73,7 +76,10 @@ namespace Wave.Controllers
             {
                 // Usuario válido, redirigir a la pagina del perfil, además de ir mandando su id o algo para identificarlo en las vistas siguientes(Quizas sean sessions)
                 // return View("~/Views/Prueba/Index.cshtml");
-                return RedirectToAction("Index", "Prueba");
+
+                // Guardar el ID del usuario en la sesión
+                HttpContext.Session.SetInt32("UserId", user.UserId);
+                return RedirectToAction("Profile", "Home");
             }
             else
             {
