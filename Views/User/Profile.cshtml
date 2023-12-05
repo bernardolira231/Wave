@@ -1,6 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Profile Page";
-    int? userId = Context.Session.GetInt32("UserId");
+    int? otheruser = ViewBag.OtherUser;
 }
 
 @model List<Wave.Models.Post>
@@ -18,25 +18,18 @@
         <div class="spaceName">
             <!--Nombre del usuario con el id asignado a la session-->
             <h3>
-                @if (userId == null)
+                @if (otheruser == null)
                 {
                     <h3>Nada de esto importa</h3>
                 }
                 else
                 {
-                    <h3>@userId</h3>
+                    <h3>@otheruser</h3>
                 }
             </h3>
         </div>
         <br>
-        <div class="btnZone">
-            <div class="btnEdit">
-                <span class="material-icons-sharp">
-                    edit
-                </span>
-                <h3>Edit</h3>
-            </div>
-        </div>
+
         <br>
         <div id="postZone">
             <ul>
@@ -44,7 +37,7 @@
                 {
                     foreach (var post in Model)
                     {
-                        if (post.UserId == userId && post.IsDeleted == false)
+                        if (post.UserId == otheruser && post.IsDeleted == false)
                         {
                             <li class="post-item">
                                 <img src="data:image/jpeg;base64, @Convert.ToBase64String(post.Content)" alt="Imagen" />

@@ -19,8 +19,11 @@ public class HomeController : Controller
         _environment = environment;
     }
 
-    public async Task<IActionResult> Profile() => View(await _context.Posts.ToListAsync());
-
+    public async Task<IActionResult> Profile()
+    {
+        return View(await _context.Posts.ToListAsync());
+    }
+    
     public IActionResult Index()
     {
         return View();

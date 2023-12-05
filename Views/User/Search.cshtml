@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Search Users";
+}
+
+@model List<Wave.Models.Usuario>
+
+<h2>Search Users</h2>
+
+<form asp-action="Search" method="post">
+    <div class="form-group">
+        <label for="searchTerm">Search Term:</label>
+        <input type="text" name="searchTerm" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
