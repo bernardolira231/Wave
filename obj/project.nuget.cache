@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "goUI04gl9AYJTd5zxRJ8vuk/ai6J7ihzY044OjSBxQDEX0HWKX13Fp/ZM6/Yq1IzHJCKCXUkmOLCuTKLZrTakQ==",
+  "dgSpecHash": "cLdE9eKDnXhA/Ud/Ap3sOj2RfxcYV88Yl3H5FM2+8XrnYRrir3nt0c9Glq3VvghFQjBfNeA9bfoMCTLt9AQ7Kw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\EricG\\source\\repos\\Wave\\Wave.csproj",
+  "projectFilePath": "C:\\Users\\EricG\\Source\\Repos\\Wave2\\Wave.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EricG\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\EricG\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

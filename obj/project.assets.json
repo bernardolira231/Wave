@@ -2889,11 +2889,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EricG\\source\\repos\\Wave\\Wave.csproj",
+      "projectUniqueName": "C:\\Users\\EricG\\Source\\Repos\\Wave2\\Wave.csproj",
       "projectName": "Wave",
-      "projectPath": "C:\\Users\\EricG\\source\\repos\\Wave\\Wave.csproj",
+      "projectPath": "C:\\Users\\EricG\\Source\\Repos\\Wave2\\Wave.csproj",
       "packagesPath": "C:\\Users\\EricG\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EricG\\source\\repos\\Wave\\obj\\",
+      "outputPath": "C:\\Users\\EricG\\Source\\Repos\\Wave2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\EricG\\AppData\\Roaming\\NuGet\\NuGet.Config",
