@@ -5,6 +5,7 @@
 
 @model List<Wave.Models.Post>
 
+<link rel="stylesheet" href="~/css/style.css">
 <link rel="stylesheet" href="~/css/test.css">
 
 <main>
@@ -16,7 +17,16 @@
         <br>
         <div class="spaceName">
             <!--Nombre del usuario con el id asignado a la session-->
-            <h3>@userId</h3>
+            <h3>
+                @if (userId == null)
+                {
+                    <h3>Nada de esto importa</h3>
+                }
+                else
+                {
+                    <h3>@userId</h3>
+                }
+            </h3>
         </div>
         <br>
         <div class="btnZone">
@@ -34,7 +44,7 @@
                 {
                     foreach (var post in Model)
                     {
-                        if (post.UserId == userId)
+                        if (post.UserId == userId && post.IsDeleted == false)
                         {
                             <li class="post-item">
                                 <img src="data:image/jpeg;base64, @Convert.ToBase64String(post.Content)" alt="Imagen" />
@@ -50,36 +60,6 @@
         </div>
     </div>
 
-    <!-- Add Post -->
-    <div id="add-post-popup" class="popup">
-        <div class="popup-content">
-            <span class="close" id="close-popup">&times;</span>
-            <!-- Formulario -->
-            <div class="form-container">
-                <h2>Agregar Post</h2>
-                <form id="post-form">
-                    <div class="file-drop-area" id="fileDropArea">
-                        <label for="post-image">Arrastra y suelta la imagen aquí o </label>
-                        <span class="file-msg">Selecciona un archivo</span>
-                        <input type="file" id="post-image" accept="image/*" required>
-                    </div>
-
-                    <label for="post-title">Título:</label>
-                    <input type="text" id="post-title" required>
-
-                    <label for="post-description">Descripción:</label>
-                    <textarea id="post-description" required></textarea>
-
-                    <button type="submit">Agregar Post</button>
-                </form>
-            </div>
-
-            <!-- Previsualización de la imagen -->
-            <div class="image-preview-container">
-                <div id="image-preview"></div>
-            </div>
-        </div>
-    </div>
     <!-- Contenedor del popup Post -->
     <div id="post_popupContainer" class="post_popup">
         <div class="post_popup-content">
@@ -88,7 +68,6 @@
                 <img id="post_popup-image" src="" alt="Imagen">
             </div>
             <div class="post_popup-text-container">
-                <h2 id="post_popup-title">Titulo<!-- Aqui iria el titulo obteniendolo de la BD--></h2>
                 <p id="post_popup-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ipsum labore quas facere enim optio expedita aperiam excepturi nesciunt maxime et possimus vitae, debitis quidem unde! Blanditiis ipsa minima vero?<!-- Aqui iria la descripcion obteniendolo de la BD--></p>
             </div>
         </div>
@@ -96,4 +75,3 @@
 
     <script src="~/js/posts.js"></script>
 </main>
-

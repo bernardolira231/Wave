@@ -60,10 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     postForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+        //e.preventDefault();
         addPostPopup.style.display = "none";
-        postForm.reset();
-        imagePreview.innerHTML = "";
+        //postForm.reset();
+        //imagePreview.innerHTML = "";
     });
 });
 

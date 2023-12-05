@@ -1,11 +1,15 @@
-﻿<!DOCTYPE html>
+﻿@{
+    int? userId = Context.Session.GetInt32("UserId");
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="~/css/index.css">
     <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/index.css">
     <title>@ViewData["Main Page"] - Wave</title>
 </head>
 <body>
@@ -29,18 +33,27 @@
                     </span>
                     <h3>Search</h3>
                 </a>
-                <a href="@Url.Action("Profile", "Home")">
-                    <span class="material-icons-sharp">
-                        person_outline
-                    </span>
-                    <h3>Profile</h3>
-                </a>
-                <a id="add-post-btn" href="">
-                    <span class="material-icons-sharp">
-                        queue
-                    </span>
-                    <h3>Add Post</h3>
-                </a>
+
+                @if (userId != null)
+                {
+                    <a href="@Url.Action("Profile", "Home")">
+                        <span class="material-icons-sharp">
+                            person_outline
+                        </span>
+                        <h3>Profile</h3>
+                    </a>
+                }
+
+                @if (userId != null)
+                {
+                    <a id="add-post-btn" href="">
+                        <span class="material-icons-sharp">
+                            queue
+                        </span>
+                        <h3>Add Post</h3>
+                    </a>
+                } 
+
                 <div class="dark-mode">
                     <span class="material-icons-sharp active">
                         light_mode
@@ -49,12 +62,28 @@
                         dark_mode
                     </span>
                 </div>
-                <a href="#">
+
+                @if (userId != null)
+                {
+                    <a href="#">
+                        <span class="material-icons-sharp">
+                            logout
+                        </span>
+                        <h3>Logout</h3>
+                    </a>
+                }
+
+                else
+                {
+                    <a href="@Url.Action("Index", "Login")">
                     <span class="material-icons-sharp">
-                        logout
+                        login
                     </span>
-                    <h3>Logout</h3>
+                    <h3>Login</h3>
                 </a>
+                }
+
+                
             </div>
         </aside>
 
@@ -75,21 +104,18 @@
 
             <!-- Formulario -->
             <div class="form-container">
-                <h2>Agregar Post</h2>
-                <form id="post-form">
+                <h2>Add Post</h2>
+                <form id="post-form" enctype="multipart/form-data" asp-controller="Home" asp-action="SavePost" method="post">
                     <div class="file-drop-area" id="fileDropArea">
                         <label for="post-image">Arrastra y suelta la imagen aquí o </label>
                         <span class="file-msg">Selecciona un archivo</span>
-                        <input type="file" id="post-image" accept="image/*" required>
+                        <input type="file" id="post-image" name="image" accept="image/*" required>
                     </div>
 
-                    <label for="post-title">Título:</label>
-                    <input type="text" id="post-title" required>
-
                     <label for="post-description">Descripción:</label>
-                    <textarea id="post-description" required></textarea>
+                    <textarea id="post-description" name="description" required></textarea>
 
-                    <button type="submit">Agregar Post</button>
+                    <button type="submit" value="Submit Form">Add Post</button>
                 </form>
             </div>
 
@@ -101,5 +127,7 @@
     </div>
 
     <script src="~/js/index.js" asp-append-version="true"></script>
+    <script src="~/js/post.js" asp-append-version="true"></script>
+
 </body>
 </html>
