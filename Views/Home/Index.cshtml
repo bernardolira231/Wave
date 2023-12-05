@@ -1,12 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    int? userId = Context.Session.GetInt32("UserId");
 }
-
-@model List<Wave.Models.Post>
 
 <link rel="stylesheet" href="~/css/style.css">
 
 <main id="main-content">
+    @if (userId != null)
+    {
+        <script>
+            window.location.href = "Home/Profile";
+        </script>
+    }
     <div class="card welcome-section">
         <h1>Welcome to Wave!</h1>
         <p>We're excited to have you here. Get started by either signing in or creating a new account.</p>

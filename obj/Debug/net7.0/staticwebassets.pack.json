@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\Files\\Ticket.jpg",
+      "PackagePath": "staticwebassets\\Files\\Ticket.jpg"
+    },
+    {
       "Id": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\css\\index.css",
       "PackagePath": "staticwebassets\\css\\index.css"
     },

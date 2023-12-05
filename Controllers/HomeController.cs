@@ -32,27 +32,35 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public string SavePost(IFormFile image, string title, string description)
+    public async Task<IActionResult> SavePost(IFormFile image, string title, string description)
     {
+        // Obtén el usuario actual desde la sesión
+        int userId = HttpContext.Session.GetInt32("UserId") ?? 0;
 
-        string fileName = Path.GetFileName(image.FileName);
-
-        var FileDic = "Files"; //carpeta donde se guardaran las imagenes
-
-        string FilePath = Path.Combine(_environment.WebRootPath, FileDic); //hace la string de la ruta de carpeta
-
-        if (!Directory.Exists(FilePath))
-            Directory.CreateDirectory(FilePath); //si no existe la carpeta indicada la crea
-
-        var filePath = Path.Combine(FilePath, image.FileName); //hace la string de la ruta para la imagen
-
-        using (FileStream fs = System.IO.File.Create(filePath))
+        // Convierte la imagen a un array de bytes
+        byte[] content;
+        using (MemoryStream ms = new MemoryStream())
         {
-            image.CopyTo(fs); //guarda la imagen
+            image.CopyTo(ms);
+            content = ms.ToArray();
         }
 
-        return "Saved file: " + fileName + " " + title + " " + description;
-        //return View("Profile");
+        // Crea un nuevo objeto Post
+        var newPost = new Post
+        {
+            UserId = userId,
+            Likes = 0,
+            PublicationDate = DateTime.Now,
+            IsDeleted = false,
+            Content = content,
+            Caption = description
+        };
+
+        // Guarda el nuevo Post en la base de datos
+        _context.Posts.Add(newPost);
+        await _context.SaveChangesAsync();
+
+        return RedirectToAction("Index");
     }
 
     public IActionResult Privacy()
@@ -62,10 +70,8 @@ public class HomeController : Controller
 
     public IActionResult LogOut()
     {
-        // Limpiar la sesión al realizar logout
+        // Limpiar la variable de session y rediriir al index 
         HttpContext.Session.Clear();
-
-        // Redirigir a la página de inicio u otra página después del logout
         return RedirectToAction("Index", "Home");
     }
 

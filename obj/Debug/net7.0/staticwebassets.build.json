@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1sXwP4EEIjWBIuuT8EiIEzXq3qbsTMLSiIJWynnXgU8=",
+  "Hash": "D4QzaIkHQ7J+aNy2C9VJ84zzXUyh4EmxJjMORrBIMZ0=",
   "Source": "Wave",
   "BasePath": "_content/Wave",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\Files\\Ticket.jpg",
+      "SourceId": "Wave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\",
+      "BasePath": "_content/Wave",
+      "RelativePath": "Files/Ticket.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\Ticket.jpg"
     },
     {
       "Identity": "C:\\Users\\EricG\\source\\repos\\Wave\\wwwroot\\img\\logo.png",

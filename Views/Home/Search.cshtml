@@ -11,7 +11,46 @@
     <div class="search">
         <h1>Search</h1>
         <div class="search__input">
-            <input type="text" placeholder="Search">
+            <input type="text" placeholder="Search" id="searchText">
         </div>
     </div>
+
+    <div id="searchResults"></div>
+    <div id="namesConsulta" style="display: none;">Juan%María%Carlos%Ana%Luis%Laura%Diego%Sofía%Pedro%Lucía%Pablo%Valentina%Andrés%Camila%Javier%Fernanda%Daniel%Martina%Alejandro%Isabella%Tomás%Isabel%Matías%Victoria%Emilia%José%Renata%Gabriel%Elena%Francisco%Adriana%</div>
+
+    <script>
+        // Obtener los nombres y dividirlos en un array
+        let getNames = document.getElementById("namesConsulta");
+        let namesString = getNames.innerHTML;
+        let names = namesString.split("%");
+
+        // Obtener el elemento searchResults fuera de la función
+        let searchResults = document.getElementById("searchResults");
+
+        setInterval(ShowSearchResults, 500);
+
+        async function ShowSearchResults() {
+            let htmlResults = "";
+
+            let inputElement = document.getElementById('searchText');
+            let textoEscrito = inputElement.value.toLowerCase();
+
+            if (textoEscrito != "" && textoEscrito != " " && textoEscrito != "  ") {
+                let nombresCoincidentes = names.filter(function (nombre) {
+                    return nombre.toLowerCase().includes(textoEscrito);
+                });
+
+                // Iterar sobre los elementos hijos de searchResults
+                for (let i = 0; i < nombresCoincidentes.length; i++) {
+                    htmlResults += "<form enctype='multipart/form-data' asp-controller='Home' asp-action='Go2otherProfile' method='post'><input type='hidden' id='hidden-Input' name='nameValue' value='" + "{db_id}" + "'/><input type='submit' value='" + nombresCoincidentes[i] + "'> </form>";
+                }
+
+                // Actualizar el contenido de searchResults
+                searchResults.innerHTML = htmlResults;
+            }
+            else {
+                searchResults.innerHTML = "";
+            }
+        }
+    </script>
 </main>
