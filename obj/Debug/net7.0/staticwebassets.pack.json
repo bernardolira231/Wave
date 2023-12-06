@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\prueba.css"
     },
     {
+      "Id": "C:\\Users\\EricG\\source\\repos\\Wave2\\wwwroot\\css\\search.css",
+      "PackagePath": "staticwebassets\\css\\search.css"
+    },
+    {
       "Id": "C:\\Users\\EricG\\source\\repos\\Wave2\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -31,6 +35,10 @@
     {
       "Id": "C:\\Users\\EricG\\source\\repos\\Wave2\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\EricG\\source\\repos\\Wave2\\wwwroot\\img\\heart-992.svg",
+      "PackagePath": "staticwebassets\\img\\heart-992.svg"
     },
     {
       "Id": "C:\\Users\\EricG\\source\\repos\\Wave2\\wwwroot\\img\\logo.png",

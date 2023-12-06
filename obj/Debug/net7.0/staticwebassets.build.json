@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TXQT5z7m7R8wtmqHE0qH7UzbzFHK94R28bfzQC0e7JI=",
+  "Hash": "idfIo28zQgqcuIHeYFJu9i5ruDJRZrPIB4hfwwUVkNE=",
   "Source": "Wave",
   "BasePath": "_content/Wave",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\prueba.css"
+    },
+    {
+      "Identity": "C:\\Users\\EricG\\source\\repos\\Wave2\\wwwroot\\css\\search.css",
+      "SourceId": "Wave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\EricG\\source\\repos\\Wave2\\wwwroot\\",
+      "BasePath": "_content/Wave",
+      "RelativePath": "css/search.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\search.css"
     },
     {
       "Identity": "C:\\Users\\EricG\\source\\repos\\Wave2\\wwwroot\\css\\site.css",
@@ -151,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Files\\Ticket.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\EricG\\source\\repos\\Wave2\\wwwroot\\img\\heart-992.svg",
+      "SourceId": "Wave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\EricG\\source\\repos\\Wave2\\wwwroot\\",
+      "BasePath": "_content/Wave",
+      "RelativePath": "img/heart-992.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\heart-992.svg"
     },
     {
       "Identity": "C:\\Users\\EricG\\source\\repos\\Wave2\\wwwroot\\img\\logo.png",
