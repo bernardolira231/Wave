@@ -2884,26 +2884,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\EricG\\.nuget\\packages\\": {}
+    "/Users/bernardolira/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EricG\\Source\\Repos\\Wave2\\Wave.csproj",
+      "projectUniqueName": "/Users/bernardolira/workspace/Wave/Wave.csproj",
       "projectName": "Wave",
-      "projectPath": "C:\\Users\\EricG\\Source\\Repos\\Wave2\\Wave.csproj",
-      "packagesPath": "C:\\Users\\EricG\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EricG\\Source\\Repos\\Wave2\\obj\\",
+      "projectPath": "/Users/bernardolira/workspace/Wave/Wave.csproj",
+      "packagesPath": "/Users/bernardolira/.nuget/packages/",
+      "outputPath": "/Users/bernardolira/workspace/Wave/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\EricG\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/bernardolira/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2952,7 +2950,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -171,3 +171,47 @@
     font-size: 1.5rem;
     color: #333;
 }
+
+#postZone ul li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heart {
+    width: 64px !important;
+    height: 64px !important;
+    position: absolute;
+    pointer-events: none;
+    top: 97px;
+    left: 92px;
+    opacity: 0;
+  }
+
+  #postZone ul li .like {
+    animation: 1s like ease-in-out;
+  }
+
+  @keyframes like {
+    0% {
+      opacity: 0;
+      scale: 0;
+    }
+    15% {
+      opacity: 1;
+      scale: 1.2;
+    }
+    30% {
+      scale: .95;
+    }
+    45%,
+    80% {
+      scale: 1;
+    }
+  
+    100% {
+      opacity: 1;
+      scale: 0;
+    }
+  }
