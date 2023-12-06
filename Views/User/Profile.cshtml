@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Profile Page";
     int? otheruser = ViewBag.OtherUser;
+    string otherusername = ViewBag.OtherUserName;
 }
 
 @model List<Wave.Models.Post>
@@ -17,14 +18,14 @@
         <br>
         <div class="spaceName">
             <!--Nombre del usuario con el id asignado a la session-->
-                @if (otheruser == null)
-                {
-                    <h3>Nada de esto importa</h3>
-                }
-                else
-                {
-                    <h3>@otheruser</h3>
-                }
+            @if (otherusername == null)
+            {
+                <h3>Nada de esto importa</h3>
+            }
+            else
+            {
+                <h3>@otherusername</h3>
+            }
         </div>
         <br>
 

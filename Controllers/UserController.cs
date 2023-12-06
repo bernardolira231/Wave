@@ -31,9 +31,10 @@ namespace Wave.Controllers
             return View(users);
         }
 
-        public async Task<IActionResult> Profile(int? otheruser)
+        public async Task<IActionResult> Profile(int? otheruser, string otherusername)
         {
             ViewBag.OtherUser = otheruser;
+            ViewBag.OtherUserName = otherusername;
             return View(await _context.Posts.ToListAsync());
         }
     }

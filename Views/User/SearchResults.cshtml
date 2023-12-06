@@ -6,28 +6,30 @@
 
 <link rel="stylesheet" href="~/css/style.css">
 <link rel="stylesheet" href="~/css/search.css">
-    
+
+<h2>Search Results</h2>
+
 @if (Model.Any())
 {
 
-     <main>
-    <div class="search">
-        <h1>Search</h1>
-        <div class="search__input">
-            <input type="text" placeholder="Search" id="searchText">
+    <main>
+        <div class="search">
+            <h1>Search</h1>
+            <div class="search__input">
+                <input type="text" placeholder="Search" id="searchText">
+            </div>
         </div>
-    </div>
 
-    <div id="searchResults"></div>
-    <div style="display: none;">
+        <div id="searchResults"></div>
+        <div style="display: none;">
             <p id="namesConsulta">
                 @foreach (var otheruser in Model)
                 {
-                    @otheruser.UserName @("$") @otheruser.UserId @("%")   
+                    @otheruser.UserName @("$") @otheruser.UserId @("%")
                 }
-        </p>
+            </p>
 
-    </div>
+        </div>
     </main>
 
     /*
@@ -85,7 +87,8 @@ else
             // Iterar sobre los elementos hijos de searchResults
             for (let i = 0; i < nombresCoincidentes.length; i++) {
                 let NamesIds = nombresCoincidentes[i].split("$");
-                htmlResults += "<a href='Profile?otheruser=" + NamesIds[1] + "'>" + NamesIds[0] + "</a><br>";
+                htmlResults += "<a href='Profile?otheruser=" + NamesIds[1] + "&otherusername=" + NamesIds[0] + "'>" + NamesIds[0] + "</a><br>";
+
             }
 
             // Actualizar el contenido de searchResults

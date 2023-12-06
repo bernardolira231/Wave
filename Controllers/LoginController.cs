@@ -33,8 +33,7 @@ namespace Wave.Controllers
             {
                 // Mandar mensaje de que ya existe una cuenta asociada a ese correo
                 // return View("~/Views/Login");
-                ViewData["ErrorMessage"] = "Ya existe una cuenta asociada a ese correo.";
-                return View("Index");
+                return RedirectToAction("index", "Home");
             }
             else
             {
@@ -85,8 +84,7 @@ namespace Wave.Controllers
             {
                 // si no enviar mensaje de error por que no existe ese usuario o los datos son incorrectos
                 // return View("~/Views/Login");
-                ViewData["ErrorMessage"] = "Credenciales incorrectas.";
-                return View("Index");
+                return RedirectToAction("index", "Home");
             }
         }
     }

@@ -12,7 +12,23 @@
     <div class="main__profile">
         <div id="profilePic">
             <!--Foto de perfil del usuario con el id asignado a la session-->
-            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="">
+            @if (userId == null)
+            {
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="">
+            }
+            else
+            {
+                var usuario = Model.FirstOrDefault(u => u.User.UserId == userId);
+
+                if (usuario != null && usuario.User.ProfilePicture != null)
+                {
+                    <img src="data:image/jpeg;base64, @Convert.ToBase64String(usuario.User.ProfilePicture)" alt="Imagen" />
+                }
+                else
+                {
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="">
+                }
+            }
         </div>
         <br>
         <div class="spaceName">
@@ -20,11 +36,16 @@
             <h3>
                 @if (userId == null)
                 {
-                    <h3>Nada de esto importa</h3>
+                    @Html.Display("Nada de esto importa")
                 }
                 else
                 {
-                    <h3>@userId</h3>
+                    var usuario = Model.FirstOrDefault(u => u.User.UserId == userId);
+
+                    if (usuario != null)
+                    {
+                        @usuario.User.UserName
+                    }
                 }
             </h3>
         </div>

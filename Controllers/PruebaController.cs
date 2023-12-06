@@ -13,6 +13,10 @@ namespace Wave.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index() => View(await _context.Posts.ToListAsync());
+        public async Task<IActionResult> Index()
+        {
+            var post = _context.Posts.Include(u => u.User);
+            return View(await post.ToListAsync());
+        }
     }
 }

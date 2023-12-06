@@ -21,7 +21,8 @@ public class HomeController : Controller
 
     public async Task<IActionResult> Profile()
     {
-        return View(await _context.Posts.ToListAsync());
+        var post = _context.Posts.Include(u => u.User);
+        return View(await post.ToListAsync());
     }
     
     public IActionResult Index()
