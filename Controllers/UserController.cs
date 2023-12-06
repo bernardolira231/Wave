@@ -35,7 +35,9 @@ namespace Wave.Controllers
         {
             ViewBag.OtherUser = otheruser;
             ViewBag.OtherUserName = otherusername;
-            return View(await _context.Posts.ToListAsync());
+
+            var post = _context.Posts.Include(u => u.User);
+            return View(await post.ToListAsync());
         }
     }
 }

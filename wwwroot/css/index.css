@@ -1,6 +1,5 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
-:root {
+﻿:root {
+    --btn-background: #3498db;
     --color-primary: #6C9BCF;
     --color-danger: #FF0060;
     --color-success: #1B9C85;
@@ -28,232 +27,58 @@
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
-* {
+#main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
-    outline: 0;
-    appearance: 0;
-    border: 0;
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+}
+
+.welcome-section h1 {
+    : var(--btn-background);
+
+}
+
+.welcome-section p {
+    margin: 10px 0;
+
+}
+
+.action-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
     text-decoration: none;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 14px;
-}
-
-body {
-    width: 100vw;
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.88rem;
-    user-select: none;
-    overflow-x: hidden;
-    color: var(--color-dark);
-    background-color: var(--color-background);
-}
-
-.primary {
-    color: var(--color-primary);
-}
-
-.danger {
-    color: var(--color-danger);
-}
-
-.success {
-    color: var(--color-success);
-}
-
-.warning {
-    color: var(--color-warning);
-}
-
-.wave {
-    color: var(--color-wave);
-}
-
-a {
-    color: var(--color-dark);
-}
-
-img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
-}
-
-h1 {
-    font-weight: 800;
-    font-size: 1.8rem;
-}
-
-h2 {
-    font-weight: 600;
-    font-size: 1.4rem;
-}
-
-.h2__wave {
-    margin-top: 0.5rem;
-}
-
-h3 {
-    font-weight: 500;
-    font-size: 0.87rem;
-}
-
-p {
+    background-color: var(--btn-background);
     color: var(--color-dark-variant);
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-b {
-    color: var(--color-dark);
+.btn:hover {
+    background-color: #2980b9;
 }
 
-.container {
-    display: grid;
-    width: 96%;
-    margin: 0 auto;
-    gap: 1.8rem;
-    grid-template-columns: 12rem auto 23rem;
+.card {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
 }
-
-aside {
-    height: 100vh;
-}
-
-    aside .toggle {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 1.4rem;
-    }
-
-        aside .toggle .logo {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-            aside .toggle .logo img {
-                width: 3rem;
-                height: 3rem;
-            }
-
-        aside .toggle .close {
-            padding-right: 1rem;
-            display: none;
-        }
-
-    aside .sidebar {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--color-white);
-        box-shadow: var(--box-shadow);
-        border-radius: 16px;
-        height: 88vh;
-        position: relative;
-        top: 1.5rem;
-        transition: all 0.3s ease;
-    }
-
-        aside .sidebar:hover {
-            box-shadow: none;
-        }
-
-        aside .sidebar a {
-            display: flex;
-            align-items: center;
-            color: var(--color-info-dark);
-            height: 3.7rem;
-            gap: 1rem;
-            position: relative;
-            margin-left: 2rem;
-            transition: all 0.3s ease;
-        }
-
-            aside .sidebar a span {
-                font-size: 1.6rem;
-                transition: all 0.3s ease;
-            }
-
-            aside .sidebar a:last-child {
-                position: absolute;
-                bottom: 2rem;
-                width: 100%;
-            }
-
-            aside .sidebar a.active {
-                width: 100%;
-                color: var(--color-primary);
-                background-color: var(--color-light);
-                margin-left: 0;
-            }
-
-                aside .sidebar a.active::before {
-                    content: '';
-                    width: 6px;
-                    height: 18px;
-                    background-color: var(--color-primary);
-                }
-
-                aside .sidebar a.active span {
-                    color: var(--color-primary);
-                    margin-left: calc(1rem - 3px);
-                }
-
-            aside .sidebar a:hover {
-                color: var(--color-primary);
-            }
-
-                aside .sidebar a:hover span {
-                    margin-left: 0.6rem;
-                }
-
-        aside .sidebar .dark-mode {
-            background-color: var(--color-light);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 1.6rem;
-            width: 4.2rem;
-            cursor: pointer;
-            border-radius: var(--border-radius-1);
-            /* margin-top: 12px;
-    margin-left: 3.9rem;
-    margin-bottom: 1.5rem; */
-            position: absolute;
-            bottom: 6rem;
-            left: 2rem;
-        }
-
-            aside .sidebar .dark-mode span {
-                font-size: 1.2rem;
-                width: 50%;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-                aside .sidebar .dark-mode span.active {
-                    background-color: var(--color-primary);
-                    color: white;
-                    border-radius: var(--border-radius-1);
-                }
-
-main {
-    margin-top: 1.4rem;
-}
-
-    main .search input {
-        border-radius: 1rem;
-        background-color: var(--color-white);
-        font-size: 20px;
-        color: var(--color-dark);
-        padding: 1.5rem 16.5rem;
-        box-shadow: var(--box-shadow);
-        position: absolute;
-        top: 10rem;
-        left: 37rem;
-        text-align: center;
-    }
