@@ -67,7 +67,7 @@
                     {
                         if (post.UserId == userId && post.IsDeleted == false)
                         {
-                            <li class="post-item post_popup-item">
+                            <li class="post-item post_popup-item" data-description="@post.Caption">
                                 <img class="post_popup-image" src="data:image/jpeg;base64, @Convert.ToBase64String(post.Content)" alt="Imagen" />
                             </li>
                         }
@@ -89,9 +89,7 @@
                 <img id="post_popup-image" src="" alt="Imagen">
             </div>
             <div class="post_popup-text-container">
-                <p id="post_popup-description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ipsum labore quas facere enim optio expedita aperiam excepturi nesciunt maxime et possimus vitae, debitis quidem unde! Blanditiis ipsa minima vero?
-                </p>
+                <p id="post_popup-description"></p>
             </div>
         </div>
     </div>
