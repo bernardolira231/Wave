@@ -15,17 +15,11 @@ namespace Wave.Controllers
             _context = context;
         }
 
-        public IActionResult Search()
-        {
-            return View();
-        }
 
-        // Acción para procesar la búsqueda de usuarios
-        [HttpPost]
         public async Task<IActionResult> Search(string searchTerm)
         {
             var users = await _context.Usuarios
-                .Where(u => u.UserName.Contains(searchTerm))
+                .Where(u => u.UserName.Contains(""))
                 .ToListAsync();
 
             return View("SearchResults", users);

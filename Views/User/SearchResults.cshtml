@@ -4,11 +4,34 @@
 
 @model List<Wave.Models.Usuario>
 
-<h2>Search Results</h2>
-
+<link rel="stylesheet" href="~/css/style.css">
+<link rel="stylesheet" href="~/css/search.css">
+    
 @if (Model.Any())
 {
-    <table class="table">
+
+     <main>
+    <div class="search">
+        <h1>Search</h1>
+        <div class="search__input">
+            <input type="text" placeholder="Search" id="searchText">
+        </div>
+    </div>
+
+    <div id="searchResults"></div>
+    <div style="display: none;">
+            <p id="namesConsulta">
+                @foreach (var otheruser in Model)
+                {
+                    @otheruser.UserName @("$") @otheruser.UserId @("%")   
+                }
+        </p>
+
+    </div>
+    </main>
+
+    /*
+    <table style="display: none;" class="table">
         <thead>
             <tr>
                 <th>User ID</th>
@@ -29,8 +52,47 @@
             }
         </tbody>
     </table>
+    */
 }
 else
 {
     <p>No users found.</p>
 }
+
+
+<script>
+    // Obtener los nombres y dividirlos en un array
+    let getNames = document.getElementById("namesConsulta");
+    let namesString = getNames.innerHTML;
+    let names = namesString.split("%");
+
+    // Obtener el elemento searchResults fuera de la función
+    let searchResults = document.getElementById("searchResults");
+
+    setInterval(ShowSearchResults, 2000);
+
+    async function ShowSearchResults() {
+        let htmlResults = "";
+
+        let inputElement = document.getElementById('searchText');
+        let textoEscrito = inputElement.value.toLowerCase();
+
+        if (textoEscrito != "" && textoEscrito != " " && textoEscrito != "  ") {
+            let nombresCoincidentes = names.filter(function (nombre) {
+                return nombre.toLowerCase().includes(textoEscrito);
+            });
+
+            // Iterar sobre los elementos hijos de searchResults
+            for (let i = 0; i < nombresCoincidentes.length; i++) {
+                let NamesIds = nombresCoincidentes[i].split("$");
+                htmlResults += "<a href='Profile?otheruser=" + NamesIds[1] + "'>" + NamesIds[0] + "</a><br>";
+            }
+
+            // Actualizar el contenido de searchResults
+            searchResults.innerHTML = htmlResults;
+        }
+        else {
+            searchResults.innerHTML = "";
+        }
+    }
+</script>
